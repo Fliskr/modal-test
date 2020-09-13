@@ -153,12 +153,14 @@ const BillingInfoModalForm = ({
                     value={state.name}
                     id="name"
                     label="Customer Full Name"
+                    placeholder="e.g. John Smith"
                     error={errors.name || undefined}
                 ></Form.Input>
                 <Form.Input
                     onChange={onChange}
                     value={state.company}
                     error={errors.company || undefined}
+                    placeholder="e.g. Coca Cola"
                     id="company"
                     label="Company Name"
                 ></Form.Input>
@@ -169,6 +171,7 @@ const BillingInfoModalForm = ({
                         value={state.country}
                         label="Country"
                         error={errors.country || undefined}
+                        placeholder="e.g. Finland"
                         options={countries.map(({ country }) => ({
                             text: country,
                             value: country,
@@ -192,6 +195,7 @@ const BillingInfoModalForm = ({
                         value={state.city}
                         onChange={onChange}
                         error={errors.city || undefined}
+                        placeholder="e.g. Helsinki"
                         label="City"
                     ></Form.Input>
                     <Form.Select
@@ -217,6 +221,7 @@ const BillingInfoModalForm = ({
                     value={state.zip_code}
                     onChange={onChange}
                     error={errors.zip_code || undefined}
+                    placeholder="e.g. 551321"
                     label="ZIP Code"
                 ></Form.Input>
                 <Form.TextArea
@@ -225,6 +230,7 @@ const BillingInfoModalForm = ({
                     name="address"
                     error={errors.address || undefined}
                     label="Address"
+                    placeholder="e.g. 2450 Iroquois Ave."
                     onChange={(e, data) => {
                         setState({ ...state, [data.name]: data.value });
                         setErrors({ ...errors, [data.name]: "" });
